@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomCountPillView" customModule="FinanceManager" customModuleProvider="target">
+            <connections>
+                <outlet property="amountLabel" destination="6YT-Vc-uV8" id="gqM-EV-NbY"/>
+                <outlet property="containerView" destination="kFH-8c-bfQ" id="gkQ-Q0-IzI"/>
+                <outlet property="pillImageView" destination="5vs-yk-rjU" id="f6b-Xt-bGp"/>
+                <outlet property="titleLabel" destination="JIB-mp-ki4" id="n6s-Sh-UDC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="209" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFH-8c-bfQ" customClass="CustomView" customModule="FinanceManager" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="209" height="80"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kp4-bm-WUK" customClass="CustomView" customModule="FinanceManager" customModuleProvider="target">
+                            <rect key="frame" x="10.000000000000004" y="16.666666666666668" width="46.333333333333343" height="46.666666666666657"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="income" translatesAutoresizingMaskIntoConstraints="NO" id="5vs-yk-rjU">
+                                    <rect key="frame" x="7" y="7" width="32.333333333333336" height="32.666666666666664"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="5vs-yk-rjU" firstAttribute="centerY" secondItem="Kp4-bm-WUK" secondAttribute="centerY" id="fcE-sc-85x"/>
+                                <constraint firstItem="5vs-yk-rjU" firstAttribute="centerX" secondItem="Kp4-bm-WUK" secondAttribute="centerX" id="gQk-M1-BcU"/>
+                                <constraint firstItem="5vs-yk-rjU" firstAttribute="width" secondItem="Kp4-bm-WUK" secondAttribute="width" multiplier="0.7" id="iWT-7g-Jau"/>
+                                <constraint firstItem="5vs-yk-rjU" firstAttribute="height" secondItem="Kp4-bm-WUK" secondAttribute="height" multiplier="0.7" id="mak-3A-BTp"/>
+                                <constraint firstAttribute="width" secondItem="Kp4-bm-WUK" secondAttribute="height" multiplier="1:1" id="pLe-4k-WSd"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KXb-0o-6X4">
+                            <rect key="frame" x="66.333333333333329" y="20.333333333333332" width="59" height="39.666666666666671"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="income" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIB-mp-ki4">
+                                    <rect key="frame" x="0.0" y="0.0" width="59" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YT-Vc-uV8">
+                                    <rect key="frame" x="0.0" y="18" width="59" height="21.666666666666671"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstItem="KXb-0o-6X4" firstAttribute="leading" secondItem="Kp4-bm-WUK" secondAttribute="trailing" constant="10" id="DUw-Xn-9Cx"/>
+                        <constraint firstItem="Kp4-bm-WUK" firstAttribute="height" secondItem="kFH-8c-bfQ" secondAttribute="height" multiplier="0.58" id="P6a-F9-ZF6"/>
+                        <constraint firstItem="Kp4-bm-WUK" firstAttribute="centerY" secondItem="kFH-8c-bfQ" secondAttribute="centerY" id="REY-IJ-l6y"/>
+                        <constraint firstItem="Kp4-bm-WUK" firstAttribute="leading" secondItem="kFH-8c-bfQ" secondAttribute="leading" constant="10" id="VGz-cz-IxF"/>
+                        <constraint firstItem="KXb-0o-6X4" firstAttribute="centerY" secondItem="kFH-8c-bfQ" secondAttribute="centerY" id="kfH-w9-db2"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="kFH-8c-bfQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3d3-qs-dZT"/>
+                <constraint firstAttribute="bottom" secondItem="kFH-8c-bfQ" secondAttribute="bottom" id="QG3-Bf-4Bd"/>
+                <constraint firstItem="kFH-8c-bfQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XQr-mo-Rok"/>
+                <constraint firstAttribute="trailing" secondItem="kFH-8c-bfQ" secondAttribute="trailing" id="qqm-Ry-2CT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="393.12977099236639" y="-22.535211267605636"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="income" width="128" height="128"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
